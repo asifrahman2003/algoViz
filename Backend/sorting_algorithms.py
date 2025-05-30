@@ -1,11 +1,14 @@
 def bubble_sort_steps(arr):
-    steps = [arr.copy()]
+    steps = [{"step": arr.copy(), "code": "Initial array"}]
     n = len(arr)
     for i in range(n):
         for j in range(0, n - i - 1):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
-                steps.append(arr.copy())
+                steps.append({
+                    "step": arr.copy(),
+                    "code": f"Swapped {arr[j]} and {arr[j+1]} at positions {j} and {j+1}"
+                })
     return steps
 
 
