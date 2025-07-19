@@ -10,6 +10,10 @@ CORS(app)
 def ping():
     return "pong", 200
 
+@app.route("/", methods=["GET"])
+def home():
+    return "<h1>Welcome to the Sorting Visualizer API</h1><p>Use /sort and /recommend endpoints with POST requests.</p>"
+
 @app.route("/sort", methods=["POST"])
 def sort_array():
     data = request.get_json()
