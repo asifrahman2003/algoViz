@@ -7,10 +7,10 @@ export async function getSortSteps(method, array) {
     body: JSON.stringify({ method, array }),
   });
 
-  const data = await res.json(); // <- extract the JSON correctly
+  const data = await res.json(); // <- must make sure so that the frontend works properly, extract the JSON correctly
 
   console.log("Steps received from backend:", data.steps);
-  return data; // <- return full object, not just data.steps
+  return data; // <- here we return full object, not just data.steps
 }
 
 export async function getRecommendation(data_type, data_size, real_time) {

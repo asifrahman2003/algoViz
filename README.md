@@ -10,7 +10,7 @@ A modern, interactive sorting algorithm visualizer built with **React.js** on th
 - Easily extendable with more sorting algorithms and features
 - Graph-style rendering of values as bars
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Frontend
 - React.js
