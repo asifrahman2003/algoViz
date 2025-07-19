@@ -6,7 +6,11 @@ export async function getSortSteps(method, array) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ method, array }),
   });
-  return await res.json();
+
+  const data = await res.json(); // <- extract the JSON correctly
+
+  console.log("✅ Steps received from backend:", data.steps);
+  return data; // <- return full object, not just data.steps
 }
 
 export async function getRecommendation(data_type, data_size, real_time) {
@@ -15,5 +19,6 @@ export async function getRecommendation(data_type, data_size, real_time) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ data_type, data_size, real_time }),
   });
+
   return await res.json();
 }

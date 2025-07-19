@@ -1,47 +1,43 @@
-// src/components/Navbar.jsx
 import { motion } from "framer-motion";
+import { Github, BookOpen } from "lucide-react";
 
 const Navbar = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
-    <nav className="w-full px-6 py-4 flex items-center justify-between bg-[#0d1117] border-b border-blue-950 shadow-sm z-50">
-      {/* Branding */}
-      <div
-        className="flex items-center gap-2 cursor-pointer"
-        onClick={scrollToTop}
-      >
-        <motion.div
-          className="w-2.5 h-2.5 bg-blue-500 rounded-full"
-          whileHover={{ scale: 1.5 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        />
-        <h1 className="text-xl sm:text-2xl font-bold text-white">
-          <span className="text-blue-400">algo</span>Viz
-        </h1>
-      </div>
+    <header className="w-full bg-slate-900 border-b border-slate-800">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 py-3 flex items-center justify-between">
+        {/* Left: Logo / Title */}
+        <div className="text-base sm:text-lg !font-bold text-slate-100 flex items-center gap-2">
+          <motion.div
+            className="w-2.5 h-2.5 bg-blue-500 rounded-full"
+            animate={{ opacity: [1, 0.3, 1], scale: [1, 1.25, 1] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <span className="tracking-tight select-none">
+            algo<span className="text-blue-400">Viz</span>
+          </span>
+        </div>
 
-      {/* Icons or Links (placeholder for future) */}
-      <div className="flex items-center gap-4 text-sm text-blue-400">
-        {/* You can change these to icons or links */}
-        <a
-          href="#"
-          className="hover:text-blue-300 transition duration-200 hidden sm:inline"
-        >
-          Docs
-        </a>
-        <a
-          href="https://github.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-blue-300 transition duration-200"
-        >
-          GitHub
-        </a>
+        {/* Right: Icon Links */}
+        <nav className="flex items-center gap-3 sm:gap-4 text-slate-400">
+          <a
+            href="#"
+            className="hover:text-slate-100 transition"
+            title="Docs"
+          >
+            <BookOpen size={18} strokeWidth={1.8} />
+          </a>
+          <a
+            href="https://github.com/asifrahman2003/Sort_visualizer"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-slate-100 transition"
+            title="GitHub"
+          >
+            <Github size={18} strokeWidth={1.8} />
+          </a>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 };
 
