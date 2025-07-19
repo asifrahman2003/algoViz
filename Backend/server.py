@@ -19,16 +19,30 @@ def sort_array():
     data = request.get_json()
     array = data.get("array", [])
     method = data.get("method", "bubble")
-    steps = get_sorting_steps(method, array)
-    return jsonify({"steps": [{"step": s, "code": ""} for s in steps]})
 
-@app.route("/recommend", methods=["POST"])
+    try:
+        steps = get_sorting_steps(method, array)
+
+        # ✅ Confirm structure
+        print("✅ Final steps being returned:")
+        for i, step in enumerate(steps):
+            print(f"{i+1}. {step}")
+
+        return jsonify({ "steps": steps })  # ✅ THIS LINE IS CRITICAL
+    except Exception as e:
+        return jsonify({ "error": str(e) }), 400
+
+
+@app.route('/recommend', methods=['POST'])
 def recommend():
     data = request.get_json()
-    array = data.get("array")
-    method = recommend_sorting(array)
-    return jsonify({"recommended": method})
+    recommendation = recommend_sorting(
+        data.get('data_type'),
+        data.get('data_size'),
+        data.get('real_time')
+    )
+    return jsonify({"recommended": recommendation})
+
 
 if __name__ == "__main__":
-        app.run(host="127.0.0.1", port=5000, debug=True)
-
+    app.run(host="127.0.0.1", port=5000, debug=True)

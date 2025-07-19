@@ -9,7 +9,7 @@ export async function getSortSteps(method, array) {
 
   const data = await res.json(); // <- extract the JSON correctly
 
-  console.log("✅ Steps received from backend:", data.steps);
+  console.log("Steps received from backend:", data.steps);
   return data; // <- return full object, not just data.steps
 }
 

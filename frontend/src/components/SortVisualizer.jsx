@@ -23,12 +23,12 @@ const SortVisualizer = ({ steps }) => {
 
   return (
     <div className="mt-12">
-      <h2 className="text-2xl font-bold mb-6 text-white tracking-tight">
+      <h2 className="text-2xl font-bold mb-6 text-white tracking-tight text-center">
         Sorting Steps
       </h2>
 
       {steps.length === 0 ? (
-        <p className="text-gray-400">No steps to display. Try submitting an array.</p>
+        <p className="text-gray-400 text-center">No steps to display. Try submitting an array.</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {steps.map((stepObj, i) => {

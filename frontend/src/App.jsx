@@ -10,14 +10,14 @@ function App() {
   const [steps, setSteps] = useState([]);
 
   const handleSort = async (method, array) => {
-  try {
-    const response = await getSortSteps(method, array);
-    console.log("✅ Full steps received from backend:", response.steps);
-    setSteps(response.steps); // <-- Don't extract only .step
-  } catch (err) {
-    console.error("Error fetching sort steps:", err);
-  }
-};
+    try {
+      const response = await getSortSteps(method, array);
+      console.log("Full steps received from backend:", response.steps);
+      setSteps(response.steps);
+    } catch (err) {
+      console.error("Error fetching sort steps:", err);
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-900 text-slate-100">
@@ -26,7 +26,7 @@ function App() {
       <main className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 pt-6 pb-20">
         <SortInput onSort={handleSort} />
         <SortVisualizer steps={steps} />
-        <Recommendation />
+        <Recommendation/>
       </main>
 
       <Footer />

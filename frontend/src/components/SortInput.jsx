@@ -27,7 +27,7 @@ const SortInput = ({ onSort }) => {
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl p-6 rounded-2xl mb-8 max-w-xl w-full mx-auto space-y-6"
+      className="backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl p-6 rounded-2xl mb-8 w-full mx-auto space-y-6"
     >
       {/* Input Array */}
       <div>

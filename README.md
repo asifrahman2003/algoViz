@@ -1,21 +1,21 @@
 # Sort Visualizer
 
-A modern, interactive sorting algorithm visualizer built with **Next.js (React)** on the frontend and **Python (Flask)** on the backend. This project is designed to help users visually understand how different sorting algorithms work, step-by-step.
+A modern, interactive sorting algorithm visualizer built with **React.js** on the frontend and **Python (Flask)** on the backend. This project is designed to help users visually understand how different sorting algorithms work, step-by-step.
 
 ## Features
 
-- ✨ Clean, responsive user interface
-- 🔄 Dynamic animation of sorting steps
-- 🧠 Backend logic powered by Python for algorithm computation
-- 🧰 Easily extendable with more sorting algorithms and features
-- 📊 Graph-style rendering of values as bars
+- Clean, responsive user interface
+- Dynamic animation of sorting steps
+- Backend logic powered by Python for algorithm computation
+- Easily extendable with more sorting algorithms and features
+- Graph-style rendering of values as bars
 
 ## 🛠 Tech Stack
 
 ### Frontend
-- [Next.js](https://nextjs.org/) with React
-- Tailwind CSS (optional styling layer)
-- TypeScript
+- React.js
+- Tailwind CSS
+- JavaScript
 
 ### Backend
 - Python Flask API
@@ -27,14 +27,14 @@ Sort_visualizer/
 │
 ├── Backend/
 │   ├── server.py               # Flask server and API routing
-│   ├── sorting_algorithms.py  # Sorting logic and step tracking
-│   └── recommendation_logic.py# (Optional) Suggest algorithms based on context
+│   ├── sorting_algorithms.py  	# Sorting logic and step tracking
+│   └── recommendation_logic.py	# Suggest algorithms based on context
 │
 ├── frontend/
 │   ├── public/                 # Static assets
-│   ├── src/app/               # Next.js app pages and components
-│   ├── README.md              # Frontend-specific docs
-│   └── …                    # Other config and dependency files
+│   ├── src/               		# React.js app pages and components
+│   ├── README.md              	# Frontend-specific docs
+│   └── …                    	# Other config and dependency files
 │
 ├── .gitignore
 ├── README.md                  # ← You’re reading this!
@@ -54,7 +54,7 @@ cd Sort_visualizer
 cd Backend
 python server.py
 ```
-3. Start Frontend (Next.js)
+3. Start Frontend
 ```
 cd ../frontend
 npm install
@@ -67,4 +67,4 @@ npm run dev
 	•	User controls for speed, array size, and pause/resume
  
 ## License
-MIT License © Asif Rahman & Apurbo Barua
+MIT License © Asifur Rahman & Apurbo Barua
