@@ -1,4 +1,4 @@
-const BASE_URL = "http://127.0.0.1:5000";
+const BASE_URL = "https://algoviz-fe71.onrender.com";
 
 export async function getSortSteps(method, array) {
   const res = await fetch(`${BASE_URL}/sort`, {

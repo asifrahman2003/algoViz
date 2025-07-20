@@ -23,12 +23,12 @@ def sort_array():
     try:
         steps = get_sorting_steps(method, array)
 
-        # ✅ Confirm structure
-        print("✅ Final steps being returned:")
+        # Confirm structure
+        print("Final steps being returned:")
         for i, step in enumerate(steps):
             print(f"{i+1}. {step}")
 
-        return jsonify({ "steps": steps })  # ✅ THIS LINE IS CRITICAL
+        return jsonify({ "steps": steps })  # THIS LINE IS CRITICAL
     except Exception as e:
         return jsonify({ "error": str(e) }), 400
 
