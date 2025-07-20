@@ -3,14 +3,19 @@ import { Github, BookOpen } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="w-full bg-slate-950 border-t border-slate-800 shadow-inner">
-      <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col items-center justify-center text-sm text-slate-400 gap-2">
+      <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col items-center justify-center text-xs sm:text-sm text-slate-400 gap-2 text-center">
         
-        {/* Centered Text */}
-        <p className="text-center">
-          © {new Date().getFullYear()} <span className="font-semibold text-slate-200">algo<span className="text-blue-400">Viz</span> v1.0</span>
+        {/* Project Name & Year */}
+        <p>
+          © {new Date().getFullYear()}{" "}
+          <span className="font-semibold text-slate-200">
+            algo<span className="text-blue-400">Viz</span> v1.0
+          </span>
         </p>
-        <p className="text-center">
-        Built with ❤️ by{" "}
+
+        {/* Built by */}
+        <p className="flex flex-wrap justify-center gap-x-1">
+          Built with ❤️ by{" "}
           <a
             href="https://www.linkedin.com/in/iamasiff"
             target="_blank"
@@ -19,7 +24,7 @@ const Footer = () => {
           >
             Asifur Rahman
           </a>{" "}
-          and{" "}
+          &{" "}
           <a
             href="https://www.linkedin.com/in/apurbo-barua17/"
             target="_blank"
@@ -30,8 +35,9 @@ const Footer = () => {
           </a>.
         </p>
 
-        {/* Centered Icons
-        <div className="flex items-center gap-4">
+        {/* Optional Icons */}
+        {/* 
+        <div className="flex items-center gap-4 mt-2">
           <a
             href="#"
             className="hover:text-slate-200 transition"
@@ -48,7 +54,8 @@ const Footer = () => {
           >
             <Github size={18} strokeWidth={1.6} />
           </a>
-        </div> */}
+        </div>
+        */}
       </div>
     </footer>
   );
