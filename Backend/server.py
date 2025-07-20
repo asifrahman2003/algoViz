@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
-from sorting_algorithms import get_sorting_steps
-from recommendation_logic import recommend_sorting
+from .sorting_algorithms import get_sorting_steps
+from .recommendation_logic import recommend_sorting
 from flask_cors import CORS
 
 app = Flask(__name__)
