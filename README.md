@@ -1,4 +1,4 @@
-# Sort Visualizer
+# AlgoViz
 
 A modern, interactive sorting algorithm visualizer built with **React.js** on the frontend and **Python (Flask)** on the backend. This project is designed to help users visually understand how different sorting algorithms work, step-by-step.
 
